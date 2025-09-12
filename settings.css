@@ -1,0 +1,114 @@
+/* General Layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #1e1e2f;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #ccc;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: #0ea3e8;
+  color: #fff;
+}
+
+/* Main Section */
+.dashboard-main {
+  margin-left: 240px;
+  padding: 20px;
+  width: calc(100% - 240px);
+}
+
+header h1 {
+  margin: 0 0 20px;
+  color: #333;
+}
+
+/* Settings Section */
+.settings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Card Styles */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+.card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.card input {
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.card button {
+  padding: 10px;
+  background: #0f172a;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background: #0ea3e8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .settings {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-main {
+    margin-left: 0;
+    width: 100%;
+  }
+  .sidebar {
+    display: none;
+  }
+}

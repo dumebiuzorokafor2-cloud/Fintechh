@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinPay - Digital Banking</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="250327d0-ee9b-454b-9040-41e04cf29d5a.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="250327d0-ee9b-454b-9040-41e04cf29d5a.png" alt="" width="100"></div>
+      <div class="gee">FinPay</div>
+    <nav>
+      <a href="user.html">Home</a>
+      <a href="#features">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+      <div class="charge">
+        <a href="signup.html"><button>Sign-Up</button></a>
+      </div>
+    
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Banking Made Simple</h1>
+    <p>Secure, Fast, and Reliable digital payments at your fingertips.</p>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="card">
+      <h3>🔒 Secure Transactions</h3>
+      <p>Your money is always safe with bank-level encryption.</p>
+    </div>
+    <div class="card">
+      <h3>⚡ Fast Payments</h3>
+      <p>Instant transfers, anytime, anywhere in the world.</p>
+    </div>
+    <div class="card">
+      <h3>📊 Smart Analytics</h3>
+      <p>Track your expenses and grow your savings easily.</p>
+    </div>
+  </section>
+  <section class="features" id="features">
+    <div class="card">
+        <h3>💳 Virtual Cards</h3>
+        <p>Shop online securely with one-time virtual cards.</p>
+    </div>
+    <div class="card">
+        <h3>🚨 Fraud Detection & Alerts</h3>
+        <p>Fraud detection & alerts monitor transactions in real-time.</p>
+    </div>
+    <div class="card">
+        <h3>💰 Quick Loans</h3>
+        <p> Provide instant access to funds with minimal paperwork.</p>
+    </div>
+    </section>
+
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="about-text">
+      <h2>Why Choose FinPay?</h2>
+      <p>We believe banking should be simple, transparent, and accessible to everyone. With 24/7 support, trusted partners, and innovative technology, we’re redefining financial freedom.</p>
+      <ul>
+        <li>✅ Trusted by 50,000+ users</li>
+        <li>✅ Bank-grade security</li>
+        <li>✅ Award-winning support</li>
+      </ul>
+    </div>
+    <div class="about-img">
+      <img src="3859fa9d-01f7-4e56-858a-6d99ef872eff.png" alt="" width="400">
+    </div>
+  </section>
+
+    <!-- Pricing -->
+  <section class="pricing" id="pricing">
+    <h2>Choose Your Plan</h2>
+    <p>Simple and transparent pricing designed for everyone.</p>
+
+    <!-- Toggle Switch -->
+  <div class="billing-toggle">
+    <span>Monthly</span>
+    <label class="switch">
+      <input type="checkbox" id="billingSwitch">
+      <span class="slider"></span>
+    </label>
+    <span>Yearly <small>(save 20%)</small></span>
+  </div>
+
+    <div class="pricing-grid">
+      <!-- Free Plan -->
+      <div class="price-card highlight">
+        <h3>Free</h3>
+        <p class="price"><span class="amount" data-monthly="0" data-yearly="$0">$0</span><span>/mo</span></p>
+        <ul>
+          <li>✅ Basic Wallet</li>
+          <li>✅ Free Transfers (local)</li>
+          <li>✅ Email Support</li>
+        </ul>
+        <button onclick="window.location.href='plan-free.html'">View Features</button>
+
+      </div>
+      <!-- Pro Plan -->
+      <div class="price-card highlight">
+        <h3>Pro</h3>
+        <p class="price"><span class="amount" data-monthly="9" data-yearly="$86">$9</span><span>/mo</span></p>
+        <ul>
+          <li>✅ Everything in Free</li>
+          <li>✅ Global Transfers</li>
+          <li>✅ Virtual Cards</li>
+          <li>✅ Priority Support</li>
+        </ul>
+        <button onclick="window.location.href='plan-pro.html'">View Features</button>
+
+      </div>
+      <!-- Business Plan -->
+      <div class="price-card highlight">
+        <h3>Business</h3>
+        <p class="price"><span class="amount" data-monthly="29" data-yearly="$278">$29</span><span>/mo</span></p>
+        <ul>
+          <li>✅ Everything in Pro</li>
+          <li>✅ Multi-user Access</li>
+          <li>✅ API Integrations</li>
+          <li>✅ Dedicated Manager</li>
+        </ul>
+        <button onclick="window.location.href='plan-business.html'">View Features</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Get in Touch</h2>
+    <p>Have questions? Reach out and our team will assist you.</p>
+    <form action="save_message.php" method="POST" class="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><i class="fas fa-phone"></i> +234 906 825 3097</p>
+    <p>© 2025 FinPay. All Rights Reserved.</p>
+    <div class="socials">
+      <a href="https://wa.me/2349068253097" class="social-link"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/finpay.ng" class="social-link"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/uzor16460" class="social-link"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backToTop">↑</button>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+    document.querySelectorAll('#nav-links a').forEach(link => {
+      link.addEventListener('click', () => nav.classList.remove('active'));
+    });
+
+    // Back to top button
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    // Reveal on scroll
+const revealElements = document.querySelectorAll('.card, .price-card');
+
+const revealOnScroll = () => {
+  const triggerBottom = window.innerHeight * 0.85;
+  revealElements.forEach(el => {
+    const boxTop = el.getBoundingClientRect().top;
+    if (boxTop < triggerBottom) {
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+    }
+  });
+};
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll(); // trigger on load
+// Pricing toggle
+const billingSwitch = document.getElementById("billingSwitch");
+const prices = document.querySelectorAll(".amount");
+
+billingSwitch.addEventListener("change", () => {
+  const yearly = billingSwitch.checked;
+
+  prices.forEach(price => {
+    const monthly = price.getAttribute("data-monthly");
+    const yearlyPrice = price.getAttribute("data-yearly");
+    
+    price.textContent = yearly ? yearlyPrice : monthly;
+  });
+
+  // Update suffix (/mo or /yr)
+  document.querySelectorAll(".price span:last-child").forEach(span => {
+    span.textContent = yearly ? "/yr" : "/mo";
+  });
+});
+  </script>
+</body>
+</html>

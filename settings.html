@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Settings - FinPay</title>
+  <link rel="stylesheet" href="settings.css">
+  <link rel="icon" href="250327d0-ee9b-454b-9040-41e04cf29d5a.png">
+</head>
+<body class="dashboard-body">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>FinPay Admin</h2>
+    <nav>
+      <a href="admin-dashboard.html">Messages</a>
+      <a href="settings.html" class="active">Settings</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="dashboard-main">
+    <header>
+      <h1>Admin Settings</h1>
+    </header>
+
+    <section class="settings">
+      
+      <!-- Change Password -->
+      <div class="card">
+        <h2>Change Password</h2>
+        <form>
+          <input type="password" placeholder="New Password" required>
+          <input type="password" placeholder="Confirm Password" required>
+          <button type="submit">Update Password</button>
+        </form>
+      </div>
+
+      <!-- Update Support Email -->
+      <div class="card">
+        <h2>Update Support Email</h2>
+        <form>
+          <input type="email" placeholder="Enter Support Email" value="support@finpay.com" required>
+          <button type="submit">Save Email</button>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>

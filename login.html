@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - FinPay</title>
+  <link rel="stylesheet" href="style.css">
+   <link rel="icon" href="250327d0-ee9b-454b-9040-41e04cf29d5a.png">
+</head>
+<body class="auth-body">
+
+  <div class="auth-container">
+    <h2>Welcome Back</h2>
+    <p>Log in to continue banking smarter with FinPay.</p>
+
+    <form id="loginForm" class="auth-form" onsubmit="return loginUser(event)">
+  <input type="email" placeholder="Email Address" required>
+  <input type="password" placeholder="Password" required>
+
+  <!-- Forgot Password link -->
+  <div class="forgot-password">
+    <a href="reset-password.html">Forgot Password?</a>
+  </div>
+
+  <button type="submit">Login</button>
+</form>
+
+    <p class="auth-footer">
+      Don’t have an account? <a href="signup.html">Sign Up</a>
+    </p>
+  </div>
+
+  <script>
+  function loginUser(event) {
+    event.preventDefault(); // stop page reload
+    
+    // In real life, you'd check email & password with your database here.
+    // For now, simulate success:
+    alert("Login successful! Redirecting...");
+    window.location.href = "index.html"; 
+    return false;
+  }
+</script>
+</body>
+</html>

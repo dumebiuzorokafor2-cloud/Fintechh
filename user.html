@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard - FinPay</title>
+  <link rel="stylesheet" href="user.css">
+  <link rel="icon" href="250327d0-ee9b-454b-9040-41e04cf29d5a.png">
+</head>
+<body class="dashboard-body">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>FinPay</h2>
+    <nav>
+      <a href="user.html" class="active">Dashboard</a>
+      <a href="#">Transactions</a>
+      <a href="settings.html">Settings</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="dashboard-main">
+    <header>
+      <h1>Welcome, Nature 👋</h1>
+    </header>
+
+    <section class="user-grid">
+
+      <!-- Profile Card -->
+      <div class="card profile-card">
+        <img src="https://via.placeholder.com/100" alt="User Avatar">
+        <h2>John Doe</h2>
+        <p>Email: uzor@email.com</p>
+        <button>Edit Profile</button>
+      </div>
+
+      <!-- Account Balance -->
+      <div class="card balance-card">
+        <h2>Account Balance</h2>
+        <p class="balance">$5,200.00</p>
+        <div class="actions">
+          <button>Deposit</button>
+          <button>Withdraw</button>
+        </div>
+      </div>
+
+      <!-- Transactions -->
+      <div class="card transactions-card">
+        <h2>Recent Transactions</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2025-09-05</td>
+              <td>ATM Withdrawal</td>
+              <td>-$100.00</td>
+              <td class="status failed">Failed</td>
+            </tr>
+            <tr>
+              <td>2025-09-07</td>
+              <td>Transfer to Alice</td>
+              <td>-$250.00</td>
+              <td class="status success">Success</td>
+            </tr>
+            <tr>
+              <td>2025-09-09</td>
+              <td>Salary Credit</td>
+              <td>+$2,500.00</td>
+              <td class="status success">Success</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>

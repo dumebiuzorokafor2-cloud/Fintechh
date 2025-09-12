@@ -1,0 +1,156 @@
+/* General Layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #1e1e2f;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #ccc;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: #4CAF50;
+  color: #fff;
+}
+
+/* Main Section */
+.dashboard-main {
+  margin-left: 240px;
+  padding: 20px;
+  width: calc(100% - 240px);
+}
+
+header h1 {
+  margin: 0 0 20px;
+  color: #333;
+}
+
+/* Grid Layout */
+.user-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+/* Card Styles */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Profile Card */
+.profile-card {
+  text-align: center;
+}
+.profile-card img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.profile-card button {
+  padding: 10px;
+  background: #4CAF50;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.profile-card button:hover {
+  background: #45a049;
+}
+
+/* Balance Card */
+.balance-card .balance {
+  font-size: 26px;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+.balance-card .actions button {
+  padding: 10px 14px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.balance-card .actions button:first-child {
+  background: #4CAF50;
+  color: #fff;
+}
+.balance-card .actions button:last-child {
+  background: #e53935;
+  color: #fff;
+}
+.balance-card .actions button:hover {
+  opacity: 0.9;
+}
+
+/* Transactions Table */
+.transactions-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.transactions-card th,
+.transactions-card td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+.transactions-card th {
+  background: #f4f6f9;
+}
+.status.success {
+  color: green;
+  font-weight: bold;
+}
+.status.failed {
+  color: red;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .user-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-main {
+    margin-left: 0;
+    width: 100%;
+  }
+  .sidebar {
+    display: none;
+  }
+}

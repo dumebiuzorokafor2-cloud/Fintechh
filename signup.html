@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - FinPay</title>
+  <link rel="stylesheet" href="style.css">
+   <link rel="icon" href="250327d0-ee9b-454b-9040-41e04cf29d5a.png">
+</head>
+<body class="auth-body">
+
+  <div class="auth-container">
+    <h2>Create Your Account</h2>
+    <p>Join FinPay today and take control of your finances.</p>
+
+    <form class="auth-form"  onsubmit="return signupUser(event)">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="password" placeholder="Password" required>
+      <input type="password" placeholder="Confirm Password" required>
+      <button type="submit">Create Account</button>
+    </form>
+
+    <p class="auth-footer">
+      Already have an account? <a href="login.html">Login</a>
+    </p>
+  </div>
+
+  <script>
+  const params = new URLSearchParams(window.location.search);
+  const plan = params.get("plan");
+
+  if (plan) {
+    let planName = "";
+
+    if (plan === "free") {
+      planName = "Free Plan";
+    } else if (plan === "pro") {
+      planName = "Pro Plan (please complete payment)";
+    } else if (plan === "business") {
+      planName = "Business Plan (please complete payment)";
+    }
+
+    if (plan === "free") {
+      const planBanner = document.createElement("div");
+      planBanner.className = "plan-banner";
+      planBanner.innerHTML = `You selected the <strong>${planName}</strong>.`;
+      document.querySelector(".auth-container").prepend(planBanner);
+    }
+  }
+  function signupUser(event) {
+    event.preventDefault(); // stop page reload
+    
+    // In real life, you'd check email & password with your database here.
+    // For now, simulate success:
+    alert("Sign-Up successful! Redirecting...");
+    window.location.href = "login.html"; 
+    return false;
+  }
+</script>
+
+</body>
+</html>

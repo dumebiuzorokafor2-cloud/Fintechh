@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - FinPay</title>
+  <link rel="stylesheet" href="style.css">
+   <link rel="icon" href="250327d0-ee9b-454b-9040-41e04cf29d5a.png">
+</head>
+<body class="auth-body">
+
+  <div class="auth-container">
+    <h2>Complete Your Payment</h2>
+    <p>Secure checkout for your selected plan.</p>
+
+    <!-- Payment Tabs -->
+    <div class="payment-tabs">
+      <button class="tab-btn active" onclick="showTab('card')">💳 Card Payment</button>
+      <button class="tab-btn" onclick="showTab('transfer')">🏦 Bank Transfer</button>
+    </div>
+
+    <!-- Card Payment -->
+    <form class="auth-form payment-form" id="card">
+      <input type="text" placeholder="Cardholder Name" required>
+      <input type="text" placeholder="Card Number (xxxx-xxxx-xxxx-xxxx)" maxlength="19" required>
+      <div class="split-inputs">
+        <input type="text" placeholder="MM/YY" maxlength="5" required>
+        <input type="text" placeholder="CVV" maxlength="3" required>
+      </div>
+      <button type="submit">Pay Now</button>
+    </form>
+
+    <!-- Bank Transfer -->
+    <div class="payment-form hidden" id="transfer">
+      <p>Transfer to the bank details below and click confirm:</p>
+      <div class="bank-box">
+        <p><strong>Bank:</strong> FinPay Microfinance</p>
+        <p><strong>Account Name:</strong> FinPay Technologies Ltd</p>
+        <p><strong>Account Number:</strong> 1234567890</p>
+      </div>
+      <button onclick="alert('Transfer confirmed!')">I Have Paid</button>
+    </div>
+
+    <p class="auth-footer">
+      Need help? <a href="index.html">Contact Support</a>
+    </p>
+  </div>
+
+  <script>
+  // Get plan from URL
+  const params = new URLSearchParams(window.location.search);
+  const plan = params.get("plan");
+
+  const planBanner = document.getElementById("planBanner");
+
+  if (plan) {
+    let planName = "";
+    let planPrice = "";
+
+    if (plan === "pro") {
+      planName = "Pro Plan";
+      planPrice = "$9/month";
+    } else if (plan === "business") {
+      planName = "Business Plan";
+      planPrice = "$29/month";
+    } else {
+      planName = "Free Plan";
+      planPrice = "$0";
+    }
+
+    planBanner.innerHTML = `You are paying for the <strong>${planName}</strong> <span style="color:#0ea5e9;">(${planPrice})</span>`;
+  }
+
+  // Switch between Card/Transfer tabs
+  function showTab(tab) {
+    document.querySelectorAll(".payment-form").forEach(f => f.classList.add("hidden"));
+    document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+    document.getElementById(tab).classList.remove("hidden");
+    event.target.classList.add("active");
+  }
+</script>
+</body>
+</html>
